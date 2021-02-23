@@ -389,7 +389,7 @@ class Upgrader {
   String findCountryCode({BuildContext context}) {
     Locale locale;
     if (context != null) {
-      locale = Localizations.localeOf(context, nullOk: true);
+      locale = Localizations.maybeLocaleOf(context);
     } else {
       // Get the system locale
       locale = WidgetsBinding.instance.window.locale;
